@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kalam&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://app.embed.im/snow.js" defer></script>
+    <style>
+      body {
+        background: linear-gradient(to bottom, #000118, #002c5a);
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        font-family: 'Kalam', cursive;
+      }
+
+      .container {
+        display: grid;
+        background-image: url(christmas_4.svg);
+        background-repeat: no-repeat;
+        background-position: top;
+        place-items: center;
+        height: 100vh;
+        align-items: initial;
+      }
+
+      .gift {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      h1 {
+        color: darkmagenta;
+        font-size: 64px;
+      }
+      .heart {
+        background-color: red;
+        height: 25px;
+        width: 25px;
+        transform: rotate(-45deg);
+        animation: pulse 1s infinite;
+        position: absolute;
+      }
+      .heart::before,
+      .heart::after {
+        content: '';
+        background-color: red;
+        border-radius: 50%;
+        position: absolute;
+        height: 25px;
+        width: 25px;
+      }
+      .heart::before {
+        top: -10px;
+      }
+      .heart::after {
+        left: 10px;
+      }
+      @keyframes pulse {
+        75% {
+          transform: rotate(-45deg) scale(1.1);
+        }
+      }
+
+      .heart_1 {
+        top: 50px;
+        right: 30px;
+      }
+
+      .heart_2 {
+        top: 50px;
+        left: 30px;
+      }
+
+      .author {
+        color: #fff;
+        text-align: right;
+        margin: 0 15px;
+        position: absolute;
+        bottom: 0;
+      }
+
+      .wrapper-typing {
+        min-width: 531.81px;
+      }
+
+      h1 {
+        display: block;
+        font-family: monospace;
+        white-space: nowrap;
+        border-right: 4px solid;
+        width: 15ch;
+
+        animation: typing 2s steps(15), blink 0.5s infinite step-end alternate;
+        overflow: hidden;
+      }
+
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+      }
+
+      @keyframes blink {
+        50% {
+          border-color: transparent;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="gift">
+        <img src="christmas_3.svg" alt="christmas-hat" />
+        <div class="wrapper-typing">
+          <h1>¡Feliz Navidad!</h1>
+        </div>
+        <img src="christmas-tree.svg" alt="christmas-hat" />
+      </div>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/g-OF7KGyDis?autoplay=1&cc_load_policy=3"
+        title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+      <div class="heart heart_1"></div>
+      <div class="heart heart_2"></div>
+    </div>
+    <div class="author">Hecho con 💓</div>
+  </body>
+</html>
